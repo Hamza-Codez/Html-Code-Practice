@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="">
+      <fieldset>
+        <legend>Personal Information</legend>
+        <label for="name">Name</label>
+        <input type="text" id="name" />
+        <label for="email">Email</label>
+        <input type="email" name="Email" id="email" />
+        <label for="phonenumber">Phone</label>
+        <input type="tel" name="contact" id="phonenumber" />
+        <label for="DOB">Date of Birth</label>
+        <input type="date" name="dob" id="DOB" />
+        <label for="gender">Gender</label>
+        <input type="radio" name="gender" id="male" />Male
+        <input type="radio" name="gender" id="female" />Female
+        <select name="country" id="countrySelect">
+          <option value="UnitedStates">United States</option>
+          <option value="UnitedKingdom">United Kingdom</option>
+          <option value="China">China</option>
+          <option value="Russia">Russia</option>
+        </select>
+      </fieldset>
+      <fieldset>
+        <legend>Address Street</legend>
+        <input type="text" id="address" />
+        <label for="city">City</label>
+        <input type="text" id="city" />
+        <label for="state">State</label>
+        <input type="text" id="state" />
+        <label for="zipcode">Zipcode</label>
+        <input type="number" name="zipcode" id="zipcode" />
+      </fieldset>
+      <fieldset>
+        <legend><label for="otherINfO"></label>Other Information</legend>
+        Comments<textarea
+          name="other Info"
+          id="otherINfO"
+          cols="80"
+          rows="5"
+        ></textarea
+        ><label for="agree">I agree to terms of service</label>
+        <input type="checkbox" name="agreement" id="" />
+      </fieldset>
+    </form>
+  </body>
+</html>
