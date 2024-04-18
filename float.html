@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS</title>
+    <style>
+      body {
+        background-color: rgb(0, 119, 80);
+        font-family: calibri;
+      }
+      .container {
+        background-color: aliceblue;
+      }
+      .container h1 {
+        text-align: center;
+      }
+      .box {
+        background-color: orangered;
+        width: 150px;
+        height: 150px;
+        color: white;
+        text-align: center;
+        line-height: 150px;
+      }
+      #relative {
+        position: relative;
+        top: 10px;
+      }
+      #absolute {
+        position: absolute;
+        right: 0;
+        height: 2000px;
+      }
+      #fixed {
+        position: fixed;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>CSS positions</h1>
+      <h2>Relative</h2>
+      <div class="box" id="relative">Relative</div>
+      <h2>absolute</h2>
+      <div class="box" id="absolute">Absolute</div>
+      <h2>fixed</h2>
+      <div class="box" id="fixed">Fixed</div>
+    </div>
+  </body>
+</html>

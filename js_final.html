@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reaction Tester</title>
+    <style>
+      .shape {
+        width: 200px;
+        height: 200px;
+        display: none;
+      }
+      .circle {
+        background-color: aquamarine;
+        border-radius: 50%;
+      }
+      .square {
+        background-color: coral;
+      }
+      /* Define more shape styles here */
+      .shape:hover {
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <p>Your Time: <span id="timetaken"></span></p>
+    <div id="shape" class="shape"></div>
+    <script type="text/javascript">
+      var shapes = ["circle", "square"]; // Add more shape names if needed
+      var currentShapeIndex = 0;
+      var start;
+
+      function displayNextShape() {
+        if (currentShapeIndex < shapes.length) {
+          start = new Date().getTime();
+          var currentShape = document.getElementById("shape");
+          currentShape.className = "shape " + shapes[currentShapeIndex];
+          currentShape.style.display = "block";
+          currentShapeIndex++;
+        } else {
+          document.getElementById("shape").style.display = "none";
+          document.getElementById("timetaken").innerHTML = "Done!";
+        }
+      }
+
+      document.getElementById("shape").onclick = function () {
+        var end = new Date().getTime();
+        var timeTaken = (end - start) / 1000;
+
+        displayNextShape();
+
+        if (currentShapeIndex > 0) {
+          document.getElementById("timetaken").innerHTML =
+            "Time taken: " + timeTaken + "s";
+        }
+      };
+
+      // Start the initial shape display
+      displayNextShape();
+    </script>
+  </body>
+</html>
